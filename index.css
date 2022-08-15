@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    font-size: 62.5%; /*1 rem = 10px*/
+    --primary-color: #00856f;
+    --headline-color: #22262a;
+    --paragraph: #484f56;
+}
+
+body {
+    font-family: 'DM Sans';
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+h4{
+font-size: 1.4rem; /*1rem = root font size defined by user*/
+line-height: 150%;
+color: var(--primary-color);
+/* identical to box height, or 21px */
+
+letter-spacing: 0.08em;
+
+/* Primary Colors/brand-green */ 
+}
+
+h1{
+    font-size: 3.4rem;
+    line-height: 130%;
+    text-align: center;
+    color: var(--headline-color);
+}
+
+p{
+    font-size: 1.8rem;
+    line-height: 180%;
+    color : var(--paragraph);
+}
+
+button{
+    background-color: var(--primary-color);
+}
