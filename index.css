@@ -1,13 +1,17 @@
 *{
     padding: 0;
     margin: 0;
+
+    box-sizing: border-box;
 }
 
-:root{
+:root{          /*elemento pai, pagina*/
     font-size: 62.5%; /*1 rem = 10px*/
     --primary-color: #00856f;
     --headline-color: #22262a;
     --paragraph: #484f56;
+    --brand-beige: #fffaf0;
+    --brand-light: #dce9e3;
 }
 
 body {
@@ -16,15 +20,22 @@ body {
     text-align: center;
 }
 
+header{
+    width: 37.5rem;
+    margin-inline: auto;
+    margin-top: 4.1rem;
+
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
 h4{
 font-size: 1.4rem; /*1rem = root font size defined by user*/
 line-height: 150%;
 color: var(--primary-color);
-/* identical to box height, or 21px */
-
 letter-spacing: 0.08em;
+margin-bottom: 1.6rem;
 
-/* Primary Colors/brand-green */ 
 }
 
 h1{
@@ -32,14 +43,92 @@ h1{
     line-height: 130%;
     text-align: center;
     color: var(--headline-color);
+
+    margin-bottom: 2.4rem;
 }
 
 p{
     font-size: 1.8rem;
     line-height: 180%;
     color : var(--paragraph);
+
+    margin-bottom: 3.2rem;
 }
 
 button{
     background-color: var(--primary-color);
+    
+    border: none;
+    border-radius: 8rem; 
+    
+    margin-bottom: 6rem;
+
+    height: 6.2rem;
+    width: 26.3rem;
+
+    color: white;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+
+    margin-inline: auto;
+}
+
+.stats{
+    width: 32.7rem;
+    padding-block: 4rem; /* coloca o padding no top e no bottom*/
+    margin-inline: auto; /* same left and right*/
+
+    background-color: var(--brand-beige);
+    border: 1px solid var(--brand-light);
+    border-radius: 0.6rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /*Realiza a centralização em relação ao eixo do flex-direction*/
+    gap: 6rem;    /* separação entre objetos dentro do display flex*/
+
+}
+
+.stat p{
+    margin: 0;
+    color: var(--primary-color);
+    line-height: 150%;
+}
+
+.stat h3{
+    font-size: 4.8rem;
+    color: var(--headline-color);
+    line-height: 130%;
+
+    margin-bottom: 0.4rem;
+}
+
+header img{
+    width: 26.4rem;
+    display: block;
+    margin-inline: auto;
+
+    object-position: 0 2rem;
+}
+
+
+header::before{  /*adicionar uma tag antes dos itens do header*/
+    content: "";
+    width: 100vw;
+    height: 108rem;
+    background-color: var(--brand-light);
+    display: block;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
