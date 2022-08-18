@@ -1,3 +1,4 @@
+/*========GERAL============*/
 *{
     padding: 0;
     margin: 0;
@@ -12,6 +13,8 @@
     --paragraph: #484f56;
     --brand-beige: #fffaf0;
     --brand-light: #dce9e3;
+
+    --nav-height: 7.2rem;
 }
 
 body {
@@ -20,16 +23,40 @@ body {
     text-align: center;
 }
 
-header{
+.wrapper{
     width: 37.5rem;
     margin-inline: auto;
-    margin-top: 4.1rem;
-
-    padding-left: 2rem;
-    padding-right: 2rem;
+    
+    padding-inline: 2.4rem;
 }
 
-h4{
+header{
+    margin-top: calc(4.1rem + var(--nav-height));
+}
+
+header::before{  /*adicionar uma tag antes dos itens do header*/
+    content: "";
+    width: 100vw;
+    height: 108rem/*calc(108rem+var(--nav-height))*/;
+    
+    background-color: var(--brand-light);
+    display: block;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+header img{
+    width: 26.4rem;
+    display: block;
+    margin-inline: auto;
+
+    object-position: 0 2rem;
+}
+
+header h4{
 font-size: 1.4rem; /*1rem = root font size defined by user*/
 line-height: 150%;
 color: var(--primary-color);
@@ -38,7 +65,7 @@ margin-bottom: 1.6rem;
 
 }
 
-h1{
+header h1{
     font-size: 3.4rem;
     line-height: 130%;
     text-align: center;
@@ -47,7 +74,7 @@ h1{
     margin-bottom: 2.4rem;
 }
 
-p{
+header p{
     font-size: 1.8rem;
     line-height: 180%;
     color : var(--paragraph);
@@ -55,7 +82,7 @@ p{
     margin-bottom: 3.2rem;
 }
 
-button{
+header button{
     background-color: var(--primary-color);
     
     border: none;
@@ -111,24 +138,37 @@ button{
     margin-bottom: 0.4rem;
 }
 
-header img{
-    width: 26.4rem;
-    display: block;
-    margin-inline: auto;
 
-    object-position: 0 2rem;
-}
-
-
-header::before{  /*adicionar uma tag antes dos itens do header*/
-    content: "";
-    width: 100vw;
-    height: 108rem;
-    background-color: var(--brand-light);
-    display: block;
+nav{
+    display: flex;
+    /*padding: 1.6rem 2.4rem;*/
+    height: var(--nav-height);
     
-    position: absolute;
+    position: fixed;
+
     top: 0;
-    left: 0;
-    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%); /*identifica o tamanho total do componente */
 }
+
+nav .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+}
+
+nav.scroll{
+    background: var(--primary-color);
+    width: 100vw;
+}
+
+nav.scroll svg:nth-child(1) path{
+    fill: white;
+}
+
+nav.scroll svg:nth-child(2) path{
+    stroke: white;
+}
+
+
+
