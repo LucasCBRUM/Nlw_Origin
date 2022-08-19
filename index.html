@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css" type="text/css"/>
+    <link rel="stylesheet" href="./style.css" type="text/css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
     <title>DoctorCare</title>
 </head>
-<body>
+<body onscroll="onScroll()">
 
-    <nav class="scroll">
+    <nav id="navigation" class="scroll">
         <div class="wrapper">
             <a class="logo" href="#">
                 <svg width="133" height="18" viewBox="0 0 133 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,6 +29,20 @@
                 </svg>
             </a>
 
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="#">Início</a>
+                        <a href="#">Serviços</a>
+                        <a href="#">Sobre</a>
+                    </li>
+                </ul>
+                <button>Agende sua consulta</button>
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com/profile.php?id=100003767517947"></a></li>
+                </ul>
+            </div>
+
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 20H30" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M10 12H30" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -36,7 +50,6 @@
             </svg>
         </div>
     </nav>
-
     <header class="wrapper">
     <h4>
         BOAS-VINDAS A DOCTORCARE
@@ -70,6 +83,9 @@
         </div>
     </header>
 
-        <!--- unsplash service to images --->    
+        <!--- unsplash service to images --->
+        <script src="main.js">
+        </script>
+        
 </body>
 </html>
