@@ -237,6 +237,7 @@ menu ul:nth-child(1){
     text-decoration: none;
 }
 
+
 .menu .button{
     background-color: white;
     border-radius: 4rem;
@@ -253,7 +254,6 @@ menu ul:nth-child(1){
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 1.6rem 3.2rem;
 }
 
 .social-links{
@@ -263,12 +263,14 @@ menu ul:nth-child(1){
     gap: 3.2rem;
 }
 
-body.menu-expanded logo{
+
+body.menu-expanded button,
+body.menu-expanded .logo{
     position: relative;
     z-index: 100;
 }
 
-body.menu-expanded logo path{
+body.menu-expanded .logo path{
     fill: white;
 }
 
