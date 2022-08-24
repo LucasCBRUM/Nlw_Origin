@@ -14,7 +14,14 @@
     --brand-beige: #fffaf0;
     --brand-light: #dce9e3;
 
+    --bg-ligth:#F7F9F9;
+
     --nav-height: 7.2rem;
+}
+
+html{
+    /*chrome://flags/#smooth-scrolling  caso não funcione*/
+    scroll-behavior: smooth;
 }
 
 html,body{
@@ -28,6 +35,8 @@ body {
     text-align: center;
 
     overflow: overlay;
+
+    background-color: var(--bg-ligth);
 }
 
 .wrapper{
@@ -42,6 +51,10 @@ ul{
 
 button{
     cursor: pointer;
+}
+
+section{
+    padding-block: 10rem;
 }
 
 /*============HEADER===============================*/
@@ -293,4 +306,52 @@ body.menu-expanded .logo path{
 
 body.menu-expanded button path{
     stroke: white;
+}
+
+/*=======================Services==================*/
+
+#services header h4{
+    font-size: 1.4rem;
+    line-height: 150%;
+
+    letter-spacing: 0.08rem;
+
+    text-transform: uppercase;
+
+    color: var(--primary-color);
+
+    margin-bottom: 1.6rem;
+}
+
+#services header h2{
+font-size: 3.0rem;
+line-height: 3.9rem;
+text-align: center;
+
+color: var(--headline-color);
+
+margin-bottom: 6rem;
+}
+
+/*=======================CARDS================*/
+
+#services .cards{
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+#services .card{
+    padding: 2.4rem;
+    text-align: left;
+
+    background: white;
+    /* Primary Colors/brand-green-light */
+
+    border: 1px solid var(--brand-light);
+    border-radius: .6rem;
+}
+
+#services .card h3{
+    margin-block: 1.6rem;
 }
