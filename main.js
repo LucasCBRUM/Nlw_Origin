@@ -13,7 +13,12 @@ function openMenu(){
     window.scrollTo( 0, 0 );
 }
 
-function closeMenu(){
+function closeMenu(a){
     document.body.classList.remove('menu-expanded');
-    window.scrollTo(0, y)
+    if(a = true){
+        window.scrollTo(0, 0);
+        document.querySelector('#popUp').classList.add()
+    }else{
+        window.scrollTo(0, y);  
+    }  
 }
