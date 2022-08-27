@@ -12,13 +12,8 @@ function openMenu(){
     y = window.scrollY;
 }
 
-function closeMenu(a){
-    document.body.classList.remove('menu-expanded');
-    if(a = true){
-        window.scrollTo(0, 0);
-    }else{
-        window.scrollTo(0, y);  
-    }  
+function closeMenu(){
+    document.body.classList.remove('menu-expanded'); 
 }
 
 
@@ -34,4 +29,7 @@ ScrollReveal({
 #home .stats,
 #services,
 #services header,
-#services .card`);
+#services .card,
+#about,
+#about header,
+#about .content`);
