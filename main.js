@@ -22,3 +22,16 @@ function closeMenu(a){
         window.scrollTo(0, y);  
     }  
 }
+
+function onOpen(){
+    window.scroll(0, 0);
+}
+
+//criando um objeto
+
+
+ScrollReveal({
+    origin: 'top',
+    distance: '30px',
+    duration: 700,
+}).reveal('#home, #home img, #home .stats');
