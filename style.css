@@ -171,14 +171,13 @@ margin-bottom: 1.6rem;
 /*============NAVIGATION===============================*/
 nav{
     display: flex;
+    width: 100vw;
     /*padding: 1.6rem 2.4rem;*/
     height: var(--nav-height);
 
     position: fixed;
 
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%); /*identifica o tamanho total do componente */
+    top: 0;/*identifica o tamanho total do componente */
 
     z-index: 100;
 }
@@ -192,10 +191,9 @@ nav .wrapper{
 
 nav.scroll{
     background: var(--primary-color);
-    width: 100vw;
 }
 
-nav.scroll svg:nth-child(1) path{
+nav.scroll .logo path{
     fill: white;
 }
 
@@ -211,7 +209,7 @@ nav button{
 /*============MENU EXPENDED===============================*/
 
 body.menu-expanded > :not(nav){
-    display: none;
+    visibility: 0;
 }
 
 
@@ -253,9 +251,7 @@ body.menu-expanded .menu{
 
 }
 
-body.menu-expanded nav{
-    position: relative;
-}
+
 
 .menu ul:nth-child(1){
     display: flex;
@@ -371,57 +367,64 @@ margin-bottom: 6rem;
 }
 
 
-.notification{
-    position: absolute ;
-    display: flex;
-    max-width: 30rem;
-    top: 0;
-    padding: 2rem 1.5rem;
-    margin-left: 35rem;
-    border-radius: 0.4rem;
-    background-color: var(--headline-color);
-    color: var(--brand-light);
-    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, .1);
-    transform: translateY(3rem);
-    opacity: 0;
-    visibility: hidden;
-    animation: fade 4s linear forwards;
-}
-
-.progress{
-    position: absolute;
-    left: 0.5rem;
-    bottom: 0.5rem;
-    width: 0;
-    height: .3rem;
-    background-image: linear-gradient(to right, var(--brand-light), var(--primary-color));
-    border-radius: .4rem;
-    animation: progress 3s .25s linear forwards;
-}
-
-@keyframes fade {
-
-    5%{
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0px);
-    }
-    90%{
-        opacity: 1;
-        transform: translateY(0px);
-    }
-    95%{
+    .notification {
+        position: absolute;
+        display: flex;
+        width: 25vw;
+        margin-left: 10%;
+        padding: 2rem 1.5rem;
+        margin-bottom: 1rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        bottom: 0;
+        z-index: 1000;
+        border-radius: 0.4rem;
+        background-color: var(--headline-color);
+        color: var(--brand-light);
+        box-shadow: 0 .1rem 1rem rgba(0, 0, 0, .1);
+        transform: translateY(3rem);
         opacity: 0;
+        visibility: hidden;
+        animation: fade 4s linear forwards;
+        overflow: overlay;
     }
-    100%{
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-}
 
-@keyframes progress {
-    to{
-        width: calc(100% - 10px);
+    .progress{
+        position: absolute;
+        left: 0.5rem;
+        bottom: 0.5rem;
+        width: 0;
+        height: .3rem;
+        background-image: linear-gradient(to right, var(--brand-light), var(--primary-color));
+        border-radius: .4rem;
+        animation: progress 3s .25s linear forwards;
     }
-    
-}
+
+    @keyframes fade {
+
+        5%{
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0px);
+        }
+        90%{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        95%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 0;
+            transform: translateY(30px);
+        }
+    }
+
+    @keyframes progress {
+        to{
+            width: calc(100% - 10px);
+        }
+        
+    } 
+
