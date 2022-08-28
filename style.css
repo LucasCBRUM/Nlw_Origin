@@ -13,6 +13,7 @@
     --paragraph: #484f56;
     --brand-beige: #fffaf0;
     --brand-light: #dce9e3;
+    --brand-green-hover: #00453A;
 
     --bg-ligth:#F7F9F9;
 
@@ -37,6 +38,10 @@ body {
     overflow: overlay;
 
     background-color: var(--bg-ligth);
+}
+
+img{
+    max-width: 100%; /*respeita o tamanho do pai*/
 }
 
 
@@ -94,6 +99,38 @@ section .content p{
     line-height: 150%;
 }
 
+.button{
+    background-color: var(--primary-color);
+    
+    border: none;
+    border-radius: 8rem; 
+    
+    margin-bottom: 6rem;
+
+    padding: 1.6rem 3.2rem;
+    width: fit-content; /*se adapta ao conteudo*/
+
+    color: white;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+
+    transition: background .2s;
+
+    text-decoration: none;
+}
+
+.button:hover{
+    background-color: var(--brand-green-hover);
+}
+
 /*============HEADER===============================*/
 
 #home{
@@ -122,7 +159,9 @@ section .content p{
     object-position: 0 2rem;
 }
 
-
+#home .button{
+    margin-inline: auto;
+}
 
 #home p{
     font-size: 1.8rem;
@@ -132,31 +171,7 @@ section .content p{
     margin-bottom: 3.2rem;
 }
 
-#home button{
-    background-color: var(--primary-color);
-    
-    border: none;
-    border-radius: 8rem; 
-    
-    margin-bottom: 6rem;
 
-    height: 6.2rem;
-    width: 26.3rem;
-
-    color: white;
-
-    font-size: 1.4rem;
-    font-weight: 700;
-    text-transform: uppercase;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1.6rem;
-
-    margin-inline: auto;
-}
 
 .stats{
     width: 32.7rem;
@@ -454,3 +469,27 @@ margin-bottom: 6rem;
     }
     
     */
+
+    /*============CONTACT================*/
+
+    #contact {
+        text-align: left;
+    }
+
+    #contact header{
+        margin-bottom: 3.2rem;
+    }
+
+    #contact ul{
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+
+        margin-bottom: 3.2rem;
+    }
+
+    #contact ul li {
+        display: flex;
+        align-items:center;
+        gap: 0.8rem;
+    }
