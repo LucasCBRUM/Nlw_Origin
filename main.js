@@ -1,9 +1,26 @@
+window.addEventListener('scroll', onScroll);
+onScroll();
+
 var y;
+
 function onScroll(){
+    showNavOnScroll();
+    showBackToTopButtonOnScroll();
+}
+
+function showNavOnScroll(){
     if (scrollY > 0){
         document.getElementById('navigation').classList.add('scroll');
     }else{
-        document.getElementById('navigation').classList .remove('scroll');
+        document.getElementById('navigation').classList.remove('scroll');
+    }
+}
+
+function showBackToTopButtonOnScroll(){
+    if (scrollY > 500){
+        document.getElementById('backToTopButton').classList.add('show');
+    }else{
+        document.getElementById('backToTopButton').classList.remove('show');
     }
 }
 
